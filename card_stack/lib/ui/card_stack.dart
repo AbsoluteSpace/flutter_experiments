@@ -1,7 +1,7 @@
 import 'package:card_stack/ui/style/card_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../models/card_model.dart';
+import 'package:card_stack/models/card_model.dart';
 
 class CardStack extends StatefulWidget {
   @override

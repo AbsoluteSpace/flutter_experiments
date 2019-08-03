@@ -1,7 +1,7 @@
+import 'package:dark_mode/models/dark_mode_model.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'models/dark_mode_model.dart';
-import 'ui/main.dart';
+import 'package:dark_mode/ui/main.dart';
 
 void main() {
   return runApp(MyApp());
@@ -24,10 +24,7 @@ class MyAppState extends State<MyApp> {
           builder: (context, child, model) {
         return MaterialApp(
           title: "Flutter Dark Mode",
-          home: ScopedModelDescendant<DarkModeModel>(
-              builder: (context, child, model) {
-            return Main();
-          }),
+          home: Main(),
           theme: _model.darkMode
               ? ThemeData(
                   brightness: Brightness.dark, primaryColor: Colors.teal)

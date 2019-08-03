@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../../helper.dart';
-import '../../models/dark_mode_model.dart';
+import 'package:dark_mode/helper.dart';
+import 'package:dark_mode/models/dark_mode_model.dart';
 
 class SettingsDrawer extends StatelessWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../helper.dart';
-import 'settings/settings_drawer.dart';
-import '../models/dark_mode_model.dart';
+import 'package:dark_mode/helper.dart';
+import 'package:dark_mode/ui/settings/settings_drawer.dart';
+import 'package:dark_mode/models/dark_mode_model.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class Main extends StatefulWidget {

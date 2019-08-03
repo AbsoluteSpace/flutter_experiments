@@ -1,8 +1,7 @@
 import 'package:card_stack/models/card_model.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import '../models/card_model.dart';
-import 'card_stack.dart';
+import 'package:card_stack/ui/card_stack.dart';
 
 class Main extends StatefulWidget {
   @override
