@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import '../helper.dart';
 import 'settings/settings_drawer.dart';
+import '../models/dark_mode_model.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class Main extends StatefulWidget {
   @override
@@ -11,9 +14,19 @@ class Main extends StatefulWidget {
 class _RenderState extends State<Main> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text("Flutter Dark Mode")),
-        drawer: SettingsDrawer(),
-        body: Center(child: Text("Spooky", style: TextStyle(fontSize: 20.0))));
+    return ScopedModelDescendant<DarkModeModel>(
+        builder: (context, child, model) {
+      return Scaffold(
+          appBar: AppBar(
+              iconTheme: IconThemeData(
+                  color: isDarkModeEnabled(model, Colors.white, Colors.black)),
+              title: Text("Flutter Dark Mode",
+                  style: TextStyle(
+                      color: isDarkModeEnabled(
+                          model, Colors.white, Colors.black)))),
+          drawer: SettingsDrawer(),
+          body:
+              Center(child: Text("Spooky", style: TextStyle(fontSize: 20.0))));
+    });
   }
 }

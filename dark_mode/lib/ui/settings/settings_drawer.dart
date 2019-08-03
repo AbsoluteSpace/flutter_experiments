@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+import '../../helper.dart';
 import '../../models/dark_mode_model.dart';
 
 class SettingsDrawer extends StatelessWidget {
@@ -14,8 +15,8 @@ class SettingsDrawer extends StatelessWidget {
           DrawerHeader(
             child: Text("Dark Mode Drawer",
                 textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0)),
-            decoration:
-                BoxDecoration(color: model.darkMode ? Colors.teal : Colors.red),
+            decoration: BoxDecoration(
+                color: isDarkModeEnabled(model, Colors.teal, Colors.red)),
           ),
           CheckboxListTile(
               value: model.darkMode,
